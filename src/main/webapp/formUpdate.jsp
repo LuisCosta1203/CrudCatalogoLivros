@@ -16,6 +16,10 @@
             width: 50%;
   			margin: 0 auto;
         }
+        form{
+ 		  width: 30%;       /* Ou um valor em pixels, ex: 400px */
+		  margin: 0 auto; 
+        }
     </style>
 <title>Update</title>
 </head>
@@ -25,9 +29,8 @@
 <hr>
 
 <form name="formUpdate" action="formUpdateController.jsp" method="get">
-
 <p>
-<label for="idlivros">Código do produto a alterar</label>
+<label for="idlivros">Código do livro para alterar</label>
 <input id="idlivros" type="number" name="idlivros" required>
 <input type="submit" value="Alterar">
 </p>
@@ -41,9 +44,9 @@
 	<table border="1">
   <tr>
   	<th>Id</th>
-    <th>Titulo</th>
+    <th>Título</th>
     <th>Autor</th>
-    <th>Genero</th>
+    <th>Gênero</th>
     <th>Sinopse</th>
     <th>Ano</th>
     <th>Alterar</th>
@@ -52,8 +55,6 @@
 <%
 while(rs.next()) {
 %>
-	
-
   <tr>
   	<td><%= rs.getInt("idlivros") %></td>
     <td><%= rs.getString("titulo") %></td>

@@ -34,15 +34,15 @@
 	ResultSet rs = reader.read();
 %>
 
-<h1>Listar Livros</h1>
+<h1>Lista de Livros</h1>
 <hr>
 <div name="tabela" id="tabela">
 	<table border="1">
   <tr>
   	<th>Id</th>
-    <th>Titulo</th>
+    <th>Título</th>
     <th>Autor</th>
-    <th>Genero</th>
+    <th>Gênero</th>
     <th>Sinopse</th>
     <th>Ano</th>
     <!-- <th>Exclusão</th>

@@ -9,24 +9,40 @@
 </head>
 <body>
 <header>
-CRUD relativo aos livros<br>
+<table width="100%">
+<tr>
+  	<th align="left">Projeto Acervo de Livros</th>
+    <th align="right"><a href="formLogin.jsp">Login</a></th>
+  </tr>
+</table>
+
+
+
+
 </header>
+
 <nav>
-<a href="formCreate.jsp" target="centro">Create</a>
-<a href="readController.jsp" target="centro">Read</a>
-<a href="formUpdate.jsp" target="centro">Update</a>
-<a href="formDelete.jsp" target="centro">Delete</a>
-<a href="formSearch.jsp" target="centro">Pesquisa</a>
+<a href="formCreate.jsp" target="centro">Adicionar</a>
+<a href="readController.jsp" target="centro">Listar</a>
+<a href="formUpdate.jsp" target="centro">Atualizar</a>
+<a href="formDelete.jsp" target="centro">Deletar</a>
+<a href="formSearch.jsp" target="centro">Pesquisar</a>
+
 </nav>
 
 <!-- bloco responsavel por criar uma area onde todas as paginas irão aparecer
 	 Como se fosse uma página aparecendo dentro da outra -->
 <main>
-	<iframe name="centro" scrolling="no" style="overflow: hidden; border: none;"></iframe>
+	<iframe src="livro.html" name="centro" scrolling="no" style="overflow: hidden; border: none;">
+	</iframe>
 </main>
 
 <footer>
-<p>All Rights Reserved</p>
+<p>&copy; <span id="year"></span> Luis Augusto & Thais Carvalho. Todos os direitos reservados.</p>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </footer>
 </body>
 </html>

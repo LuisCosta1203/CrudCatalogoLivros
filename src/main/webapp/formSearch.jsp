@@ -15,6 +15,10 @@
             width: 50%;
   			margin: 0 auto;
         }
+        form{
+ 		  width: 40%;       /* Ou um valor em pixels, ex: 400px */
+		  margin: 0 auto; 
+        }
     </style>
 
 <meta charset="UTF-8">
@@ -25,13 +29,13 @@
 </head>
 <body>
 
-<h1>Consulta de Livros</h1>
+<h1>Consultar Livros</h1>
 <hr>
 
 <form name="formSearch" action="searchController.jsp" method="get">
 
 <p>
-<label for="titulo">Digite o nome do livro:</label>
+<label for="titulo">Pesquise o nome do livro:</label>
 <input id="titulo" type="text" name="titulo" required>
 <input type="submit" value="Consultar">
 </p>
@@ -47,9 +51,9 @@
 	<table border="1" align>
   <tr>
   	<th>Id</th>
-    <th>Titulo</th>
+    <th>Título</th>
     <th>Autor</th>
-    <th>Genero</th>
+    <th>Gênero</th>
     <th>Sinopse</th>
     <th>Ano</th>
   </tr>

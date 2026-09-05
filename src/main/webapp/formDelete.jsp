@@ -17,6 +17,10 @@
             width: 50%;
   			margin: 0 auto;
         }
+        form{
+ 		  width: 30%;       /* Ou um valor em pixels, ex: 400px */
+		  margin: 0 auto; 
+        }
     </style>
 <title>Delete</title>
 </head>
@@ -30,7 +34,7 @@
 <form name="formDelete" action="deleteController.jsp" method="get">
 
 <p>
-<label for="idlivros">Código a excluir</label>
+<label for="idlivros">Código do livro para excluir</label>
 <input id="idlivros" type="number" name="idlivros" required>
 <input type="submit" value="Excluir">
 </p>
@@ -47,9 +51,9 @@
 	<table border="1">
   <tr>
   	<th>Id</th>
-    <th>Titulo</th>
+    <th>Título</th>
     <th>Autor</th>
-    <th>Genero</th>
+    <th>Gênero</th>
     <th>Sinopse</th>
     <th>Ano</th>
     <th>Excluir</th>

@@ -22,9 +22,9 @@
 	<table border="1">
   <tr>
   	<th>Id</th>
-    <th>Titulo</th>
+    <th>Título</th>
     <th>Autor</th>
-    <th>Genero</th>
+    <th>Gênero</th>
     <th>Sinopse</th>
     <th>Ano</th>
   </tr>
