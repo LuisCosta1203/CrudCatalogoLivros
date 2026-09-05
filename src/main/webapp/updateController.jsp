@@ -6,9 +6,10 @@
 <%@ page language="java" import="conexao.Conexao"%>
 <%@ page language="java" import="crud.Update"%>
 
-
+<!-- Esse arquivo recebe os dados do formulário formUpdateController.jsp e os envia 
+	 como parametros pra classe Update por meio do método update()  -->
 <%
-Integer idlivros = Integer.parseInt(request.getParameter("idlivros"));
+	Integer idlivros = Integer.parseInt(request.getParameter("idlivros"));
 	String titulo = request.getParameter("titulo");
 	String autor = request.getParameter("autor");
 	String genero = request.getParameter("genero");
@@ -25,7 +26,8 @@ Integer idlivros = Integer.parseInt(request.getParameter("idlivros"));
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- O número 5 representa os segundos antes do redirecionamento -->
+    <!-- esse bloco apenas espera 2 segundos e redireciona para o arquivo formSearch.jsp -->
+    <!-- O número 2 representa os segundos antes do redirecionamento -->
     <meta http-equiv="refresh" content="2 ;url=formSearch.jsp" target="centro">
     <title>Sucesso</title>
 </head>

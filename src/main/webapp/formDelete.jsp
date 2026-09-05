@@ -9,6 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<!-- estilo aplicado somente a tabela desse arquivo -->
   <style>
         #tabela {
             height: 350px;
@@ -24,6 +25,8 @@
 <h1>Exclusão de Livros</h1>
 <hr>
 
+<!-- o dado de código enviado pelo botao submit será enviado pro arquivo 
+	 deleteController.jsp -->
 <form name="formDelete" action="deleteController.jsp" method="get">
 
 <p>
@@ -33,6 +36,9 @@
 </p>
 </form>
 <br>
+
+<!-- essa parte do código é responsavel por exibir a tabela contendo
+	 os valores dos registros da tabela no banco -->
 <%
 	Read reader = new Read();
 	ResultSet rs = reader.read();
@@ -61,6 +67,7 @@ while(rs.next()) {
     <td><%= rs.getString("genero") %></td>
     <td><%= rs.getString("sinopse") %></td>
     <td><%= rs.getString("ano") %></td>
+    <!-- essa linha pega o valor do id da tabela e passa ele como parametro -->
    <td><a href="deleteController.jsp?idlivros=<%= rs.getInt("idlivros") %>">Excluir</a></td>
    <!--<td><a href="formUpdateController.jsp?idlivros=<%= rs.getInt("idlivros") %>&titulo=<%= rs.getString("titulo") %>&autor=<%= rs.getString("autor") %>&genero=<%= rs.getString("genero") %>&sinopse=<%= rs.getString("sinopse") %>&ano=<%= rs.getInt("ano") %>">Alteração</a></td>-->
   </tr>

@@ -9,6 +9,10 @@ import conexao.Conexao;
 
 public class Update {
 	
+	//classe responsavel por atualizar os dados do registro que o usuario escolher
+	//vindo do arquivo updateController.jsp
+	
+	//recebe os dados vindos do formulário digitados pelo usuario
 	public void update(String titulo, String autor, String genero, String sinopse, Integer ano, Integer idlivros) {
 		Conexao con = new Conexao();
 		Connection conn = con.get_Connection();
@@ -18,6 +22,7 @@ public class Update {
 		String sql = "UPDATE livros SET titulo = ?, autor = ?, genero = ?, sinopse = ?, ano = ? WHERE idlivros = ?";
 		
 		try {
+			//inserindo os valores entregues pelo formulario nos lugares dos ? da string sql
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, titulo);
 			ps.setString(2, autor);
@@ -40,6 +45,8 @@ public class Update {
 		}
 	
 	public ResultSet updateRead(Integer id) {
+		//metodo que verifica se o valor de id digitado pelo usuário existe
+		//no banco
 		Conexao con = new Conexao();
 		Connection conn = con.get_Connection();
 		

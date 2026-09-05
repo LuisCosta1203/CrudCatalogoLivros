@@ -19,6 +19,8 @@ CRUD relativo aos livros<br>
 <a href="formSearch.jsp" target="centro">Pesquisa</a>
 </nav>
 
+<!-- bloco responsavel por criar uma area onde todas as paginas irão aparecer
+	 Como se fosse uma página aparecendo dentro da outra -->
 <main>
 	<iframe name="centro" scrolling="no" style="overflow: hidden; border: none;"></iframe>
 </main>

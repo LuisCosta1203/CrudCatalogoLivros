@@ -28,6 +28,7 @@
 <title>Read</title>
 </head>
 <body>
+<!-- esse arquivo apensa dá um select em todos os registros do banco -->
 <%
 	Read reader = new Read();
 	ResultSet rs = reader.read();

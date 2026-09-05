@@ -11,8 +11,12 @@
 
 <h1>Consulta de Livros</h1>
 <hr>
+<!--  Esse arquivo retorna somente o registro que contem os caracteres informados
+	  no arquivo formSearch.jsp -->
 <%
 	Search searcher = new Search();
+	//armazena o retorno do metodo serach da classse Search em uma variavel
+	//resultset
 	ResultSet rs = searcher.search(request.getParameter("titulo"));
 %>
 	<table border="1">

@@ -10,7 +10,7 @@
 
 <h1>Cadastro de Livros</h1>
 <hr>
-
+<!-- formulário que pega os dados para inserir um novo livro -->
 <form name="formCreate" action="createController.jsp" method="post">
 <p>
 <label for="titulo">Titulo:</label> 
@@ -33,6 +33,7 @@
 <input type="text" name="ano" id="ano">
 </p>
 <input type="submit" value="Cadastrar Livro">
+<!-- ao clicar em "Cadastrar livro" o formulario manda as informações dos campos pro arquivo createController.jsp -->
 </form>
 
 </body>

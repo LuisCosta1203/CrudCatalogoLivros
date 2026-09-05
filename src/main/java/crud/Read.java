@@ -7,12 +7,8 @@ import java.sql.ResultSet;
 import conexao.Conexao;
 
 public class Read {
-
-	public static void main(String[] args) {
-		Read reader = new Read();
-		
-		reader.read();
-	}
+	//vlasse utilizada para ler e retornar os valores dos registros do banco
+	//ela retorna um resultset que posteriormente é tratado nas paginas .jsp
 	
 	public ResultSet read() {
 		Conexao con = new Conexao();
@@ -20,6 +16,7 @@ public class Read {
 		
 		PreparedStatement ps = null;
 		
+		//string sql pra ser executada no banco
 		String sql = "SELECT * FROM livros";
 		try {
 		

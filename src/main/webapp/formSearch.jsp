@@ -36,6 +36,7 @@
 <input type="submit" value="Consultar">
 </p>
 
+<!-- esse bloco apenas exibe a tabela com os valores do banco -->
 </form>
 <br>
 <%

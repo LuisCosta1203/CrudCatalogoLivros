@@ -21,6 +21,8 @@
 <h1>Alteração de Livros</h1>
 <hr>
 
+<!-- esse arquivo foi criado para exibir o formulario para inserção dos novos
+	 dados as serem inseridos nos registros -->
 <form name="formUpdate2" action="updateController.jsp" method="post">
 
 
