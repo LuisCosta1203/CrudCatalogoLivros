@@ -7,22 +7,27 @@
     %>
 
 <%@ page language="java" import="conexao.Conexao"%>
-<%@ page language="java" import="crud.Create"%>
+<%@ page language="java" import="login.Login"%>
     
 <%
-	String titulo = request.getParameter("titulo");
-	String autor = request.getParameter("autor");
-	String genero = request.getParameter("genero");
-	String sinopse = request.getParameter("sinopse");
-	//request.getparameter deve ser convertido pra integer
-	Integer ano =Integer.parseInt(request.getParameter("ano"));
+	String usuario = request.getParameter("usuario");
+	String senha = request.getParameter("senha");
 	
-	Create create = new Create();
+	Login loger = new Login();
 	
-	create.create(titulo, autor, genero, sinopse, ano);
-	
-	out.print("Livro Cadastrado!");
-	
+	boolean retorno = loger.verificaLogin(usuario, senha);
+	if(retorno == true){
+	out.print("Login efetuado com sucesso!");
+%>
+<meta http-equiv="refresh" content="2 ;url=formSearch.jsp" target="centro">
+<%
+	}
+	else{
+		out.print("Usuário não cadastrado!!");
+%>
+	<meta http-equiv="refresh" content="2 ;url=formCadastroUsuario.jsp" target="centro">
+<%
+	}
 %>   
 
 <!DOCTYPE html>
@@ -30,7 +35,7 @@
 <head>
    <!-- esse bloco apenas espera 2 segundos e redireciona para o arquivo formSearch.jsp -->
     <!-- O número 2 representa os segundos antes do redirecionamento -->
-    <meta http-equiv="refresh" content="2 ;url=formSearch.jsp" target="centro">
+   
     <title>Sucesso</title>
 </head>
 <body>

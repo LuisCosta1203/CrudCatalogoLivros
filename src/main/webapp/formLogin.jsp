@@ -20,8 +20,11 @@
 <input type="password" name="senha" id="senha" required>
 </p>
 <input type="submit" value="Login">
+<button onclick="window.location.href='formCadastroUsuario.jsp'">Registrar-se</button>
+
 
 </form>
+
 
 </body>
 </html>
