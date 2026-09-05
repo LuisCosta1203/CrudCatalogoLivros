@@ -1,0 +1,13 @@
+CREATE SCHEMA `cadastro_livros` ;
+
+USE `cadastro_livros`;
+
+CREATE TABLE `cadastro_livros`.`livros` (
+  `idlivros` INT NOT NULL AUTO_INCREMENT,
+  `titulo` VARCHAR(45) NOT NULL,
+  `autor` VARCHAR(45) NOT NULL,
+  `genero` VARCHAR(45) NOT NULL,
+  `sinopse` VARCHAR(45) NOT NULL,
+  `ano` INT NOT NULL,
+  PRIMARY KEY (`idlivros`),
+  UNIQUE INDEX `idlivros_UNIQUE` (`idlivros` ASC) VISIBLE);
