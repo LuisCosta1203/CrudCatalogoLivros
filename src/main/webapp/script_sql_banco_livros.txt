@@ -11,3 +11,10 @@ CREATE TABLE `cadastro_livros`.`livros` (
   `ano` INT NOT NULL,
   PRIMARY KEY (`idlivros`),
   UNIQUE INDEX `idlivros_UNIQUE` (`idlivros` ASC) VISIBLE);
+
+CREATE TABLE `cadastro_livros`.`sessao` (
+  `idsessao` INT NOT NULL AUTO_INCREMENT,
+  `user` VARCHAR(45) NOT NULL,
+  `tipoUser` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idsessao`),
+  UNIQUE INDEX `idsessao_UNIQUE` (`idsessao` ASC) VISIBLE);

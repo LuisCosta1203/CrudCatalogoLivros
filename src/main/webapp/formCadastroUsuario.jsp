@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page language="java" import="login.Sessao"%>
+
+<%
+	Sessao section = new Sessao();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +12,12 @@
 <title>Create</title>
 </head>
 <body>
-<h1>Cadastrar Usuario</h1>
-<hr>
+<table width="100%">
+<tr>
+  	<th align="left"><h1>Cadastrar Usuário</h1></th>
+    <th align="right">Usuário: <%= section.usuarioSessao()%></th>
+  </tr>
+</table>
 <!-- formulário que pega os dados para inserir um novo livro -->
 <form name="formLogin2" id="formLogin2" action="cadastroUsuarioController.jsp" method="post">
 

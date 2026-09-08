@@ -5,6 +5,7 @@
     %>
 <%@ page language="java" import="conexao.Conexao"%>
 <%@ page language="java" import="crud.Update"%>
+<%@ page language="java" import="login.Sessao"%>
 
 <!-- Esse arquivo recebe os dados do formulário formUpdateController.jsp e os envia 
 	 como parametros pra classe Update por meio do método update()  -->
@@ -18,9 +19,20 @@
 	
 	Update updater = new Update();
 	
-	updater.update(titulo, autor, genero, sinopse, ano, idlivros);
+	Sessao session4 = new Sessao();
+	System.out.println(session4.tipoUsuarioSessao());
+	if(session4.tipoUsuarioSessao().equals("admin")){
+		System.out.println("Usuário administrador");
+		updater.update(titulo, autor, genero, sinopse, ano, idlivros);
+		out.print("Livro Alterado com Sucesso");
+	}
+	else{
+		out.print("Usuário sem privilégios de Administrador");
+	}
 	
-	out.print("Livro Alterado com Sucesso");
+	
+	
+	
 %>
 
 <!DOCTYPE html>

@@ -5,6 +5,11 @@
     
 <%@ page language="java" import="conexao.Conexao"%>
 <%@ page language="java" import="crud.Read"%>
+<%@ page language="java" import="login.Sessao"%>
+
+<%
+	Sessao section = new Sessao();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,9 +30,13 @@
 </head>
 <body>
 
-<h1>Alteração de Livros</h1>
+<table width="100%">
+<tr>
+  	<th align="left"><h1>Atualização de Livros</h1></th>
+    <th align="right">Usuário: <%= section.usuarioSessao()%></th>
+  </tr>
+</table>
 <hr>
-
 <form name="formUpdate" action="formUpdateController.jsp" method="get">
 <p>
 <label for="idlivros">Código do livro para alterar</label>

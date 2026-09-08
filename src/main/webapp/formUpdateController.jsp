@@ -9,6 +9,11 @@
 <%@ page language="java" import="conexao.Conexao"%>
 <%@ page language="java" import="crud.Create"%>
 <%@ page language="java" import="crud.Update"%>
+<%@ page language="java" import="login.Sessao"%>
+
+<%
+	Sessao section = new Sessao();
+%>
 
 <!DOCTYPE html>
 <html>
@@ -17,10 +22,13 @@
 <title>Update</title>
 </head>
 <body>
-
-<h1>Alteração de Livros</h1>
+<table width="100%">
+<tr>
+  	<th align="left"><h1>Atualização de Livros</h1></th>
+    <th align="right">Usuário: <%= section.usuarioSessao()%></th>
+  </tr>
+</table>
 <hr>
-
 <!-- esse arquivo foi criado para exibir o formulario para inserção dos novos
 	 dados as serem inseridos nos registros -->
 <form name="formUpdate2" action="updateController.jsp" method="post">

@@ -8,6 +8,7 @@
 
 <%@ page language="java" import="conexao.Conexao"%>
 <%@ page language="java" import="crud.Delete"%>
+<%@ page language="java" import="login.Sessao"%>
     
 <%
 	/*esse arquivo recebe o valor passado pelo formulario do arquivo 
@@ -17,9 +18,20 @@
 
 	Delete deleter = new Delete();
 	
-	deleter.delete(id);
+	Sessao session3 = new Sessao();
+	System.out.println(session3.tipoUsuarioSessao());
+	if(session3.tipoUsuarioSessao().equals("admin")){
+		System.out.println("Usuário administrador");
+		deleter.delete(id);
+		out.print("Exclusão concluída! Id do produto = "+ id);
+	}
+	else{
+		out.print("Usuário sem privilégios de Administrador");
+	}
 	
-	out.print("Exclusão concluída! Id do produto = "+ id);
+	
+	
+	
 	
 %>   
 

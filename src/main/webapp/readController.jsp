@@ -8,6 +8,11 @@
 
 <%@ page language="java" import="conexao.Conexao"%>
 <%@ page language="java" import="crud.Read"%>
+<%@ page language="java" import="login.Sessao"%>
+
+<%
+	Sessao section = new Sessao();
+%>
 
 <!DOCTYPE html>
 <html>
@@ -28,14 +33,19 @@
 <title>Read</title>
 </head>
 <body>
+<table width="100%">
+<tr>
+  	<th align="left"><h1>Lista de Livros</h1></th>
+    <th align="right">Usuário: <%= section.usuarioSessao()%></th>
+  </tr>
+</table>
+<hr>
 <!-- esse arquivo apensa dá um select em todos os registros do banco -->
 <%
 	Read reader = new Read();
 	ResultSet rs = reader.read();
 %>
 
-<h1>Lista de Livros</h1>
-<hr>
 <div name="tabela" id="tabela">
 	<table border="1">
   <tr>

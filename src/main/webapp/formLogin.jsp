@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page language="java" import="login.Sessao"%>
+
+<%
+	Sessao section = new Sessao();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +12,12 @@
 <title>Login</title>
 </head>
 <body>
-<h1>Login</h1>
-<hr>
+<table width="100%">
+<tr>
+  	<th align="left"><h1>Login</h1></th>
+    <th align="right">Usuário: <%= section.usuarioSessao()%></th>
+  </tr>
+</table>
 <!-- formulário que pega os dados para login -->
 <form name="formLogin" action="loginController.jsp" method="post">
 <p>
@@ -21,6 +30,7 @@
 </p>
 <input type="submit" value="Login">
 <button onclick="window.location.href='formCadastroUsuario.jsp'">Registrar-se</button>
+
 
 
 </form>

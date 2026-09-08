@@ -12,7 +12,7 @@
 <table width="100%">
 <tr>
   	<th align="left">Projeto Acervo de Livros</th>
-    <th align="right"><a href="formLogin.jsp" target="centro">Login</a></th>
+    <th align="right"><a href="formLogin.jsp" target="centro">Login</a>/<a href="formLogout.jsp" target="centro">Logout</a></th>
   </tr>
 </table>
 

@@ -5,6 +5,11 @@
     
  <%@ page language="java" import="conexao.Conexao"%>
 <%@ page language="java" import="crud.Read"%>
+<%@ page language="java" import="login.Sessao"%>
+
+<%
+	Sessao section = new Sessao();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,10 +33,13 @@
 <title>Delete</title>
 </head>
 <body>
-
-<h1>Consultar Livros</h1>
+<table width="100%">
+<tr>
+  	<th align="left"><h1>Consultar Livros</h1></th>
+    <th align="right">Usuário: <%= section.usuarioSessao()%></th>
+  </tr>
+</table>
 <hr>
-
 <form name="formSearch" action="searchController.jsp" method="get">
 
 <p>

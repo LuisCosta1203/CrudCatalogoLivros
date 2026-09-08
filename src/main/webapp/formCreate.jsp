@@ -1,13 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page language="java" import="login.Sessao"%>
+
+<%
+	Sessao section = new Sessao();
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Create</title>
 </head>
+
+<table width="100%">
+<tr>
+  	<th align="left"><h1>Cadastrar Livro</h1></th>
+    <th align="right">Usuário: <%= section.usuarioSessao()%></th>
+  </tr>
+</table>
+
 <body>
-<h1>Cadastrar Livro</h1>
+
 <hr>
 <!-- formulário que pega os dados para inserir um novo livro -->
 <form name="formCreate" action="createController.jsp" method="post">
